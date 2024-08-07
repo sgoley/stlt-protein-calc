@@ -7,7 +7,7 @@ import duckdb
 st.set_page_config(layout="wide")
 
 # data import
-importdf = pd.read_csv("data/Protein CSV.csv")
+importdf = pd.read_csv("data/protein_table.csv")
 
 with st.container():
 
