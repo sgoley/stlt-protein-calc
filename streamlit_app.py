@@ -9,19 +9,22 @@ st.set_page_config(layout="wide")
 # data import
 importdf = pd.read_csv("data/protein_table.csv")
 
-with st.container():
+with st.sidebar:
 
-    # inputs
-    st.title("Daily Protein Calculator 🥛🍗🍄")
-
-    option_sex = st.selectbox(
+    option_sex = st.sidebar.selectbox(
         "What sex were you assigned at birth?",
         ("Male", "Female"),
     )
 
-    option_weight = st.number_input(
+    option_weight = st.sidebar.number_input(
         "What is your current weight in pounds?", value=150, min_value=50, max_value=500
     )
+
+
+with st.container():
+
+    # inputs
+    st.title("Daily Protein Calculator 🥛🍗🍄")
 
     # calcs based on inputs
 
